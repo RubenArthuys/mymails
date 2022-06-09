@@ -1,9 +1,9 @@
 //Count messages
-let countMessages = $('p');
-$("count").text() = countMessages.length;
+let countMessages = $('p').length;
+$('#count').text(countMessages);
 
 //Detect click
-let trash = $("trash");
+let trash = document.getElementsByClassName("trash");
 for(var i=0; i<trash.length; i++) {
     trash[i].addEventListener('click', trashClick);
 }
@@ -11,11 +11,11 @@ for(var i=0; i<trash.length; i++) {
 //Remove function
 function trashClick() {
     this.parentNode.remove();
-    $("count").text() = countMessages.length;
+    document.getElementById("count").textContent = countMessages.length;
 }
 
 //Detect Add Message click
-$('btn-add').addEventListener("click", function() {
+document.getElementById('btn-add').addEventListener("click", function() {
     
     let valueMessage = document.getElementById('add-message').value;
 
